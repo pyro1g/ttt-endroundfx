@@ -2,11 +2,6 @@
 	Script: EndRoundFX, Clientside
 
 	DarkPyro Gaming Servers, https://dpg.tf/
-	Copyright © 2018, all rights reserved.
-
-	Any unauthorized distribution or modification
-	of the following code will result in persecution
-	of said offender to the fullest extent of the law.
 ]]--
 
 include "autorun/moat_texteffects.lua"
