@@ -4,6 +4,8 @@
 	DarkPyro Gaming Servers, https://dpg.tf/
 ]]--
 
+AddCSLuaFile()
+
 resource.AddFile( "resource/fonts/bebasneue.ttf" )
 RunConsoleCommand( "ttt_postround_dm", "1" )
 
