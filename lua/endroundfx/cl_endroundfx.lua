@@ -4,7 +4,7 @@
 	DarkPyro Gaming Servers, https://dpg.tf/
 ]]--
 
-include "autorun/moat_texteffects.lua"
+include "autorun/client/moat_texteffects.lua"
 
 surface.CreateFont( "EndRoundFXFont", { font = "BebasNeue", size = ScreenScale( 23 ) } )
 
