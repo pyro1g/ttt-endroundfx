@@ -1,0 +1,11 @@
+{
+	"title": "TTT EndRoundFX",
+	"type": "gamemode",
+	"tags": [ "fun" ],
+	"ignore": [
+		"*.md",
+		"*.txt",
+		"LICENSE",
+		".git*"
+	]
+}
