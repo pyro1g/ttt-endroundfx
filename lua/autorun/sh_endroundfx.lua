@@ -13,7 +13,7 @@ if engine.ActiveGamemode() ~= "terrortown" then return end
 AddCSLuaFile()
 
 ENDROUNDFX = ENDROUNDFX or {}
-ENDROUNDFX.Version = "2.2.0"
+ENDROUNDFX.Version = "2.2.1"
 
 -- The index of each effect is what gets networked, so only ever append to this list.
 ENDROUNDFX.Effects = {
