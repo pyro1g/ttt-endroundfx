@@ -66,7 +66,7 @@ local function PackColor( col )
 	return bit.bor( bit.lshift( r, 16 ), bit.lshift( g, 8 ), b )
 end
 
-local function PostRoundDMEnabled()
+function ENDROUNDFX:PostRoundDMEnabled()
 	local cv = GetConVar( "ttt_postround_dm" )
 	return cv ~= nil and cv:GetBool()
 end
@@ -81,7 +81,7 @@ end )
 -- The text announces the deathmatch, so only show it when there is one.
 -- Other addons can return false from the EndRoundFXShouldShow hook to skip a round.
 hook.Add( "TTTEndRound", "EndRoundFX.Show", function( result )
-	if not cv_enabled:GetBool() or not PostRoundDMEnabled() then return end
+	if not cv_enabled:GetBool() or not ENDROUNDFX:PostRoundDMEnabled() then return end
 	if hook.Run( "EndRoundFXShouldShow", result ) == false then return end
 
 	lastEffect = PickEffect()

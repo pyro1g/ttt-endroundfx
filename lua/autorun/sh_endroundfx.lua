@@ -13,7 +13,7 @@ if engine.ActiveGamemode() ~= "terrortown" then return end
 AddCSLuaFile()
 
 ENDROUNDFX = ENDROUNDFX or {}
-ENDROUNDFX.Version = "2.0.0"
+ENDROUNDFX.Version = "2.1.0"
 
 -- The index of each effect is what gets networked, so only ever append to this list.
 ENDROUNDFX.Effects = {
@@ -42,6 +42,7 @@ if SERVER then
 	AddCSLuaFile( "endroundfx/cl_texteffects.lua" )
 	AddCSLuaFile( "endroundfx/cl_endroundfx.lua" )
 	include( "endroundfx/sv_endroundfx.lua" )
+	include( "endroundfx/sv_respawn.lua" )
 else
 	include( "endroundfx/cl_endroundfx.lua" )
 end

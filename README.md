@@ -51,6 +51,19 @@ The Bebas Neue font gets to clients through `resource.AddFile`, so you'll need F
 
 The text only appears when `ttt_postround_dm` is on, because there's no deathmatch to announce otherwise.
 
+### End-round respawn
+
+Brings everyone back to life for the post-round deathmatch. It's off by default. Like the text, it only runs when `ttt_postround_dm` is on.
+
+| Convar                              | Default              | Description                                                                 |
+|-------------------------------------|----------------------|-----------------------------------------------------------------------------|
+| `endroundfx_respawn`                | `0`                  | Respawns dead players when the round ends. Players still alive are healed to full health. Players who chose spectator mode are left alone |
+| `endroundfx_respawn_clear_ragdolls` | `1`                  | Removes player corpses before respawning, to cut down on entities during the deathmatch. Map ragdolls are left alone |
+| `endroundfx_respawn_give_weapon`    | `1`                  | Gives a weapon to anyone who has no pistol or heavy weapon, one second after respawning so pointshop/loadout guns go first. Also tops up that weapon's reserve ammo |
+| `endroundfx_respawn_weapon`         | `weapon_zm_revolver` | Weapon class to give out (the Deagle by default)                            |
+
+When `endroundfx_respawn` is `0`, the other three settings do nothing.
+
 ### Client convars
 
 | Convar                      | Default | Description                                                   |
