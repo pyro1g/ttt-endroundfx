@@ -59,10 +59,15 @@ Brings everyone back to life for the post-round deathmatch. It's off by default.
 |-------------------------------------|----------------------|-----------------------------------------------------------------------------|
 | `endroundfx_respawn`                | `0`                  | Respawns dead players when the round ends. Players still alive are healed to full health. Players who chose spectator mode are left alone |
 | `endroundfx_respawn_clear_ragdolls` | `1`                  | Removes player corpses before respawning, to cut down on entities during the deathmatch. Map ragdolls are left alone |
-| `endroundfx_respawn_give_weapon`    | `1`                  | Gives a weapon to anyone who has no pistol or heavy weapon, one second after respawning so pointshop/loadout guns go first. Also tops up that weapon's reserve ammo |
+| `endroundfx_respawn_give_weapon`    | `1`                  | Gives a weapon to anyone who has no pistol or heavy weapon, one second after respawning so pointshop/loadout guns go first |
 | `endroundfx_respawn_weapon`         | `weapon_zm_revolver` | Weapon class to give out (the Deagle by default)                            |
+| `endroundfx_respawn_ammo`           | `36`                 | Reserve ammo given with the weapon. `0` for none                            |
+| `endroundfx_respawn_ammo_type`      | *(empty)*            | Ammo type to give, for example `AlyxGun`. Leave empty to use the weapon's own ammo type |
+| `endroundfx_respawn_exclude_maps`   | `ttt_space_station,ttt_lost_temple_v2` | Comma-separated maps where none of the above happens      |
 
-When `endroundfx_respawn` is `0`, the other three settings do nothing.
+When `endroundfx_respawn` is `0`, the other respawn settings do nothing.
+
+**[TTT Spectator Deathmatch](https://github.com/Lil-Isma/TTT_Spectator_Deathmatch) support.** Before respawning, anyone still playing as a ghost is taken out of ghost mode without an announcement to other players, and any leftover `weapon_ghost_*` weapons are removed. This way ghosts come back as normal players and still get the weapon.
 
 ### Client convars
 
